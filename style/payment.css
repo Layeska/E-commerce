@@ -1,0 +1,38 @@
+/*** Estilos para la tarjeta de pago ***/
+
+.container-form {
+    width: 35%;
+    height: 30rem;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(50px) contrast(65%) saturate(265%);
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
+    border: 0;
+    border-radius: 1.5rem;
+}
+
+.btn-close {
+    border: none;
+    /*border: solid 1px rgb(188, 75, 81, 0.3); *//* rgba(234, 244, 244, 0.3);*/
+    background: none;
+}
+
+
+.btn-close:hover {
+    border-radius: 50%;
+    background: rgb(188, 75, 81, 0.3);
+}
+
+<!-- Donde aparece el formulario para comprar productos -->
+  <div class="container-form">
+    <div class="">
+      <div class="">
+        <button type="button" class="btn-trans btn-close">
+          <svg class="nc-icon glyph" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 32 32">
+            <g>
+              <path fill="#641220" d="M1.293,15.293L11,5.586L12.414,7l-8,8H31v2H4.414l8,8L11,26.414l-9.707-9.707 C0.902,16.316,0.902,15.684,1.293,15.293z"></path>
+            </g>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
