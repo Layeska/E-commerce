@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+
 :root {
     --txt: #1b4332;
     --colorFooter: #737373;
@@ -19,14 +21,22 @@ body {
     height: 110px;
 }
 
-header { width: 100%; }
+header { 
+    width: 100%;
+    /*position: fixed;*/
+    /*background: #f6fff8;*/
+    /*margin-top: -3rem;*/
+}
 
 .logo {
     width: 8%;
     height: 5%;
 }
 
-.menu-header { margin: 0 5rem; }
+.menu-header {
+     margin: 0 5rem;
+    
+}
 
 .menu-header li { list-style: none; }
 
@@ -59,10 +69,47 @@ header { width: 100%; }
 /*-- Slaider de images --*/
 
 .container {
+    width: 100%;
+    height: 525px;
+    margin-top: 1.5rem;
+}
+
+.container h1{
+    font-family: 'Parisienne', cursive;
+    margin-left: 18rem;
+    position: absolute;
+    margin-top: 10rem;
+    text-align: center;
+}
+
+
+
+.container img {
+    width: 100%;
+    height: 100%;
+}
+
+.container button {
+    border: 0;
+    background: rgb(255, 255, 255, 0.5);
+    position: absolute;
+    margin-top: 20rem;
+    margin-left: 32rem;
+    backdrop-filter: blur(10px) saturate(5%);
+    width: 10rem;
+    height: 3rem;
+    font-size: 1.2rem;
+    border-radius: 5rem;
+    z-index: 3;
+}
+
+
+/*
+.container {
     width: 1090px;
     height: 425px;
-    margin: 3rem 10rem;
-    position: relative;
+    margin: 5rem 10rem;
+    /*position: relative;
 }
 
 .imagen {
@@ -83,18 +130,19 @@ header { width: 100%; }
     width: fit-content;
     height: 45px;
     opacity: 0.8;
+    position: relative;
 }
 
 .menos { right: -50px; }
 
 .mas { margin-left: -60px; }
 
-.menos:active, .mas:active { opacity: 0.5; }
+.menos:active, .mas:active { opacity: 0.5; }*/
 
 h2 {
     text-align: center;
     font-size: 2rem;
-    margin-top: -1.5rem;
+    margin-top: 2rem;
     color: var(--txt);
 }
 
@@ -132,7 +180,7 @@ h2 {
     background: #c3c3c3c3;
     padding: 1rem 1.5rem;
     border-radius: 1rem;
-    position: relative;
+   /* position: relative;*/
     width: 50%;
     height: 16rem;
 }
@@ -197,6 +245,58 @@ button:hover {
 button:active {
     color: floralwhite;
 }
+
+/***/
+#prox {
+    margin-left: 2rem;
+    color: var(--txt);
+}
+
+.products-next {
+    width: 80rem;
+    height: 18rem;
+    display: flex;
+    margin-left: 5rem;
+   
+}
+
+.products-next .cactus img {
+    width: 18rem;
+    height: 18rem;
+    transition: transform .2s; 
+    border-radius: 20%;
+    margin-left: 1rem;
+}
+
+.cactus {
+    display: flex;
+    justify-content: space-around;
+    gap: 0rem;
+    overflow: hidden;
+}
+
+.cactus span {
+    position: absolute;
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-top: 15rem;
+    margin-left: 5rem;
+    opacity: 1;
+}
+
+.cactus img:hover {
+    opacity: 0.5;
+}
+
+.parrafo {
+    text-align: center;
+    width: 70rem;
+    height: 15rem;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+
 
 /**FOOTER**/
 

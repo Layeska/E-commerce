@@ -1,4 +1,4 @@
-const areaGeneral = document.querySelector('.paymess');
+/*const areaGeneral = document.querySelector('.paymess');
 
 const infoProducts = [];
 let borrar, idCounter;
@@ -35,3 +35,10 @@ const insertBuy = () => {
 
 
 
+*/
+
+const areaHTML = document.querySelector('.container-carrito');
+let infoProducts = [];
+let compras;
+
+console.log(areaHTML);

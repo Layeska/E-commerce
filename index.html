@@ -25,6 +25,8 @@
           </div>
           <li>Home</li>
           <li>Productos</li>
+          <li>Contáctanos</li>
+          <li>Politicas de Servicio</li>
         </ul>
           <div class="iconos">
             <div class="icon margen">
@@ -38,15 +40,19 @@
 
   <!-- Contenedor principal del slaider -->
   <div class="container">
+    <h1>Somos una tienda perfecta para los amantes de los catus <br>Tenemos lo que necesecitas <br>¡ven y conocenos!</h1>
+    <button>Contáctanos</button>
+    <img src="/img/fondo1.webp" alt="">
+    
     <!-- flecha de movimiento -->
-    <div class="menos"> <img src="./img/despues.png" alt="flecha derecha" width="40" height="40"></div>
+   <!-- <div class="menos"> <img src="./img/despues.png" alt="flecha derecha" width="40" height="40"></div>-->
 
     <!-- Contenedor donde van las imágenes -->
-    <div class="imagen">
-    </div>
+    <!--<div class="imagen">-->
+    <!--</div>-->
 
     <!-- flecha de movimiento -->
-    <div class="mas"> <img src="./img/antes.png" alt="flecha izquierda" width="40" height="40"> </div>
+   <!-- <div class="mas"> <img src="./img/antes.png" alt="flecha izquierda" width="40" height="40"> </div> -->
   </div> 
 
   <h2>Catálogo de compras</h2>
@@ -111,9 +117,73 @@
     </div>
   </div>
 
-  <div class="paymess">
 
+  <h3 id="prox">Próximanente en nuestro catálogo</h3>
+
+  <div class="products-next">
+    <div class="cactus">
+      <div>
+        <span style="margin-left: 50px;">Astrophytum myriostigma</span>
+        <img src="/img/astrophytum.jfif" alt="">
+      </div>
+      <div>
+        <span>Euphorbia Ingens</span>
+        <img src="/img/euphorbia.jfif" alt="">
+      </div>
+      <div>
+        <span>Carnegiea Gigantea</span>
+        <img src="/img/carneginea.jpg" alt="">
+      </div>
+      <div>
+        <span>Schlumbergera</span>
+        <img src="/img/shlumbergera.jpg" alt="">
+      </div>
+    </div>
   </div>
+
+  <div class="parrafo">
+    <p>¡Un cactus para tu oficina! <br/>Incorpora un cactus a tu mesa de trabajo,  y disfrutarás de un ambiente más fresco y tranquilo.<br/>
+      
+      Hay estudios confirman que las plantas vivas, el agua y los espacios verdes en tu puesto de trabajo, incrementan significativamente la productividad y la creatividad hasta un 15%.<br/>
+      
+      Además, los cactus oxigenan el ambiente y lo humidifican, y lo más importante ¡neutralizan las ondas electromagnéticas!.
+      Evita trastornos como el cansancio, las cefaleas o el insomnio, tras una prolongada exposición a un ambiente cargado eléctricamente adquiriendo por ejemplo, esta preciosa cactácea como esta.
+      Si lo prefieres, puedes decantarte por variedades más pequeñas que podrás combinar.</p>
+  </div>
+  
+<!---->
+<div class="container-form">
+  <div class="btn-close">
+      <button type="button" class="btn">
+        <svg class="nc-icon glyph" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 32 32">
+          <g>
+            <path fill="#641220" d="M1.293,15.293L11,5.586L12.414,7l-8,8H31v2H4.414l8,8L11,26.414l-9.707-9.707 C0.902,16.316,0.902,15.684,1.293,15.293z"></path>
+          </g>
+        </svg>
+      </button>
+  </div>
+  <div class="container-carrito">
+    <div class="carrito"> <!-- OJO no sé que lleva-->
+      <div class="tittle">
+          <h2>Carrito de compras</h2>
+      </div>
+      
+      <div id="carrito-items">
+          <div id="items">
+            <div>Producto</div>
+            <div>Descripción</div>
+            <div>cantidad</div>
+            <div>Precio Unitario</div>
+            <button id="boton-vaciar">Vaciar carrito</button>
+          </div>
+
+
+      </div>
+      <div id="total">Precio total: $ <span id="precio-total">0</span><button id="btn-pay">Checkout</button></div>
+    </div>
+ </div>
+</div>
+<!---->
 
   <footer class="site-footer">
     <div class="container-f">
