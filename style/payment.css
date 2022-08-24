@@ -18,7 +18,6 @@
     background: fuchsia;
     width: 58rem;
     height: 35rem;
-    position: absolute;
     display: flex;
     gap: 2rem;
 }
@@ -35,7 +34,7 @@
 #carrito-items {
     background: palegreen;
     width: 24rem;
-    height: 40rem;
+    height: 50rem;
     position: relative;
     display: flex;
     margin-top: 2rem;
@@ -47,7 +46,7 @@
 #items {
     background: lavenderblush;
     width: 12rem;
-    height: 20rem;
+    height: 25rem;
     display: flex;
     flex-direction: column;
     margin-left: 1.5rem;
@@ -59,5 +58,5 @@
 
 .num {
     margin-left: 4rem;
-    width: 13%;
+    width: 30%;
 }

@@ -1,52 +1,21 @@
-/*const areaGeneral = document.querySelector('.paymess');
-
-const infoProducts = [];
-let borrar, idCounter;
-
-console.log(nombreCactus);
-
-const cleanHTML = (element) => {
-    element.innerHTML = '';
-}
-
-const addListemers = () => {
-    //const buy = document.querySelectorAll('button');
-    const precioCactus = document.querySelectorAll('.precio');
-    const nombreCactus = document.querySelectorAll('.name-cactus');
-
-    precioCactus.forEach((area, i) => { area.addEventListener('click', (e) => {precioCactus(i)})});
-
-}
-
-//-- Recibe el nombre del cactus
-const generarcarta = (nombre) => {
-    idCounter++;
-    infoProducts.push({id: idCounter, nombre: nombre});
-}
-
-const updateBuy = () => { cleanHTML(areaGeneral); }
-
-const insertBuy = () => {
-    
-    const insertHTML = areaGeneral.map((area) => {
-        return `<div>insero</div>`;
-    });
-}
-
-
-
-*/
-
 const areaHTML = document.querySelector('.container-carrito');
 const btnCompra = document.querySelectorAll('.buy');
+const btnCheckOut = document.querySelector('#btn-pay');
+
+
 let infoProducts = [];
 let compras;
-
-console.log(btnCompra);
 
 btnCompra.forEach(addcardbtn => { 
     addcardbtn.addEventListener('click', addtoCardClick);
 });
+
+btnCheckOut.addEventListener('click', comprarBtnClicked);
+
+function comprarBtnClicked() {
+    areaHTML.innerHTML = '';
+    updateShoppingCardTotal();
+}
 
 function addtoCardClick(event) {
     const button = event.target;
@@ -56,22 +25,28 @@ function addtoCardClick(event) {
     const itemPrice = item.querySelector('.precio').textContent;
     const itemImge = item.querySelector('img').src;
 
-    
-
     addItemtoshopingCard(itemTitle, itemPrice, itemImge);
 }
 
 function addItemtoshopingCard(itemTitle, itemPrice, itemImge) {
-    console.log(itemTitle, itemPrice, itemImge);
+    const elementTitle = areaHTML.querySelectorAll('.name');
+
+    for(let i=0; i<elementTitle.length; i++) {
+        if(elementTitle[i].innerText === itemTitle) {
+            let elementQuantity = elementTitle[i].parentElement.querySelector('.num');
+            elementQuantity.value++;
+            return;
+        }
+    }
+    
 
     const shopingCardRow = document.createElement('div');
-   /* const shoppingCardItemsContainer = document.querySelector('.mostrarcarrito');
-    console.log(shoppingCardItemsContainer);*/
 
     const shopingCardContent = `
     <div id="carrito-items">
         <div id="items">
-            <p>Producto: ${itemTitle}</p>
+            <p>Producto: </p>
+            <p class="name">${itemTitle}</p>
             <img src=${itemImge} width="120" height="100">
             <p>Descripción: Planta Ordamental</p>
             <p>Precio: </p>
@@ -79,14 +54,17 @@ function addItemtoshopingCard(itemTitle, itemPrice, itemImge) {
             <input class="num" type="number" value="1">
             <p style="margin-top: -20px;">Cantidad: </p>
             
-            <button id="boton-vaciar">Vaciar carrito</button>
+            <button id="botonEliminar">Vaciar carrito</button>
         </div>
       </div>`;
     
       shopingCardRow.innerHTML = shopingCardContent;
       areaHTML.append(shopingCardRow);
 
-      updateShoppingCardTotal();
+    shopingCardRow.querySelector('#botonEliminar').addEventListener('click', removeShoppingCardItem);
+
+    shopingCardRow.querySelector('.num').addEventListener('change', quantityChanger);
+    updateShoppingCardTotal();
 }
 
 function updateShoppingCardTotal() {
@@ -105,5 +83,27 @@ function updateShoppingCardTotal() {
         total = total + shopingCardItemPrice * shoppingCartItemQuantity;
     });
 
-    shoppingCardTotal.innerHTML = `NIO ${total}`;
+    shoppingCardTotal.innerHTML = `NIO ${total.toFixed(2)}`;
 }
+
+function removeShoppingCardItem(event) {
+    const btnCliked = event.target;
+    
+    btnCliked.closest('#carrito-items').remove();
+    updateShoppingCardTotal();
+}
+
+function quantityChanger(event) {
+    const input = event.target;
+
+    input.value <= 0 ? (input.value = 1) : null;
+   // input.value >= 4 ? (input.value = 4) : null;
+
+    if(input.value >=4) { 
+        input.value = 4;
+        window.alert('No tenemos más productos por el momento');
+    } else null;
+
+    updateShoppingCardTotal();
+}
+
