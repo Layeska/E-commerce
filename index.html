@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="/style/normalize.css">
     <link rel="stylesheet" href="/style/styles.css">
-   <!-- <link rel="stylesheet" href="/style/payment.css">-->
+   <link rel="stylesheet" href="/style/payment.css">
     <title>Academlo Store - Ana</title>
 </head>
 <body>
@@ -20,9 +20,7 @@
   <header>
       <nav class="menu-header">
         <ul>
-          <div class="logo">
-            <img src="/img/logo.png" alt="Logo" width="90" height="60">
-          </div>
+          <div class="logo"><img src="/img/logo.png" alt="Logo" width="90" height="60"></div>
           <li>Home</li>
           <li>Productos</li>
           <li>Contáctanos</li>
@@ -43,16 +41,6 @@
     <h1>Somos una tienda perfecta para los amantes de los catus <br>Tenemos lo que necesecitas <br>¡ven y conocenos!</h1>
     <button>Contáctanos</button>
     <img src="/img/fondo1.webp" alt="">
-    
-    <!-- flecha de movimiento -->
-   <!-- <div class="menos"> <img src="./img/despues.png" alt="flecha derecha" width="40" height="40"></div>-->
-
-    <!-- Contenedor donde van las imágenes -->
-    <!--<div class="imagen">-->
-    <!--</div>-->
-
-    <!-- flecha de movimiento -->
-   <!-- <div class="mas"> <img src="./img/antes.png" alt="flecha izquierda" width="40" height="40"> </div> -->
   </div> 
 
   <h2>Catálogo de compras</h2>
@@ -72,9 +60,10 @@
           
         <div class="estrellas">
           <img src="/img/clasificacion.png" alt="">
-          <p class="precio">NIO 2300</p>
+          <span id="moneda">NIO</span>
+          <p class="precio">2300</p>
         </div>
-        <button>Comprar</button>
+        <button class="buy">Comprar</button>
       </div>
     </div>
     
@@ -91,9 +80,10 @@
 
         <div class="estrellas">
           <img src="/img/5_estrella.png" alt="">
-          <p class="precio">NIO 1899</p>
+          <span id="moneda">NIO</span>
+          <p class="precio">1899</p>
         </div>
-        <button>Comprar</button>
+        <button class="buy">Comprar</button>
       </div>
     </div>
 
@@ -110,13 +100,23 @@
         
         <div class="estrellas">
           <img src="/img/clasificacion.png" alt="">
-          <p class="precio">NIO 995</p>
+          <span id="moneda">NIO</span>
+          <p class="precio">995</p>
         </div>
-        <button>Comprar</button>
+        <button class="buy">Comprar</button>
       </div>
     </div>
   </div>
 
+  <div class="parrafo">
+    <p class="t">¡Un cactus para tu oficina! <br/>Incorpora un cactus a tu mesa de trabajo,  y disfrutarás de un ambiente más fresco y tranquilo.<br/>
+      
+      Hay estudios confirman que las plantas vivas, el agua y los espacios verdes en tu puesto de trabajo, incrementan significativamente la productividad y la creatividad hasta un 15%.<br/>
+      
+      Además, los cactus oxigenan el ambiente y lo humidifican, y lo más importante ¡neutralizan las ondas electromagnéticas!.
+      Evita trastornos como el cansancio, las cefaleas o el insomnio, tras una prolongada exposición a un ambiente cargado eléctricamente adquiriendo por ejemplo, esta preciosa cactácea como esta.
+      Si lo prefieres, puedes decantarte por variedades más pequeñas que podrás combinar.</p>
+  </div>
 
   <h3 id="prox">Próximanente en nuestro catálogo</h3>
 
@@ -141,15 +141,7 @@
     </div>
   </div>
 
-  <div class="parrafo">
-    <p>¡Un cactus para tu oficina! <br/>Incorpora un cactus a tu mesa de trabajo,  y disfrutarás de un ambiente más fresco y tranquilo.<br/>
-      
-      Hay estudios confirman que las plantas vivas, el agua y los espacios verdes en tu puesto de trabajo, incrementan significativamente la productividad y la creatividad hasta un 15%.<br/>
-      
-      Además, los cactus oxigenan el ambiente y lo humidifican, y lo más importante ¡neutralizan las ondas electromagnéticas!.
-      Evita trastornos como el cansancio, las cefaleas o el insomnio, tras una prolongada exposición a un ambiente cargado eléctricamente adquiriendo por ejemplo, esta preciosa cactácea como esta.
-      Si lo prefieres, puedes decantarte por variedades más pequeñas que podrás combinar.</p>
-  </div>
+  
   
 <!---->
 <div class="container-form">
@@ -163,25 +155,32 @@
       </button>
   </div>
   <div class="container-carrito">
-    <div class="carrito"> <!-- OJO no sé que lleva-->
+    <div class="carrito"> 
       <div class="tittle">
           <h2>Carrito de compras</h2>
       </div>
-      
-      <div id="carrito-items">
+      <!-- -->
+      <!--<div id="carrito-items">
           <div id="items">
-            <div>Producto</div>
-            <div>Descripción</div>
-            <div>cantidad</div>
-            <div>Precio Unitario</div>
+            <p>Producto: </p>
+            <img src="https://www.plantura.garden/wp-content/uploads/2019/02/Kaktus-in-Tongranulat.jpg" width="120" height="100">
+            <p>Descripción: Planta ornamental</p>
+            <p class="precio">Precio Unitario: </p>
+            <input class="num" type="number">
+            <p style="margin-top: -20px;">Cantidad: </p>
+            
             <button id="boton-vaciar">Vaciar carrito</button>
           </div>
+      </div>-->
 
-
-      </div>
-      <div id="total">Precio total: $ <span id="precio-total">0</span><button id="btn-pay">Checkout</button></div>
+      <div id="total">Precio total: $ <span class="precio-total">0</span><button id="btn-pay">Checkout</button></div>
+  </div>
+      <!---->
+     
     </div>
+    
  </div>
+ 
 </div>
 <!---->
 
@@ -211,6 +210,6 @@
 
   <script src="/script/ejecuta.js"></script>
   <script type="module" src="/script/themes.js"></script>
-  <script type="module" src="/script/moverImg.js"></script>
+  <!--<script type="module" src="/script/moverImg.js"></script>-->
 </body>
 </html>

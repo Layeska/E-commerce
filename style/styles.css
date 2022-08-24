@@ -4,6 +4,8 @@
     --txt: #1b4332;
     --colorFooter: #737373;
     --colorbg: #26272b;
+    --colorPrecio: #ff0000;
+    --colorBtn: rgb(115, 115, 115, 0.2);
 }
 
 html { height: 100%; }
@@ -81,7 +83,6 @@ header {
     margin-top: 10rem;
     text-align: center;
 }
-
 
 
 .container img {
@@ -224,15 +225,23 @@ h2 {
 }
 
 .estrellas .precio  {
-    margin-top: -1.5rem;
+    margin-top: -1rem;
     font-size: 0.8rem;
+    margin-left: 1.8rem;
     width: 5rem;
-    color: red;
+    color: var(--colorPrecio);
+}
+
+#moneda {
+    color: var(--colorPrecio);
+    display: flex;
+    margin-top: -1rem;
+    font-size: 0.8rem;
 }
 
 button {
     border: 0;
-    background: rgb(115, 115, 115, 0.2);
+    background: var(--colorBtn);
     margin-left: 5rem;
     margin-top: 1rem;
     font-size: 0.8rem;
@@ -288,14 +297,19 @@ button:active {
     opacity: 0.5;
 }
 
-.parrafo {
+.parrafo .t {
     text-align: center;
-    width: 70rem;
+    width: 75rem;
     height: 15rem;
-    margin: auto;
-    margin-top: 2rem;
+    padding: 2rem;
+    margin-left: 2rem;
 }
 
+.parrafo {
+    background: gainsboro;
+    width: 100%;
+    height: 15rem;
+}
 
 
 /**FOOTER**/

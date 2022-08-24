@@ -1,58 +1,63 @@
 /*** Estilos para la tarjeta de pago ***/
 
 .container-form {
-    width: 40%;
-    height: 40rem;
-    background: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(50px) contrast(65%) saturate(265%);
-    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
-    border: 0;
-    border-radius: 1.5rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 30rem;
+    background: pink;
+    margin-top: 3rem;
 }
-
-.btn-close {
-    border: none;
-    /*border: solid 1px rgb(188, 75, 81, 0.3); *//* rgba(234, 244, 244, 0.3);*/
-    background: none;
-}
-
-
-.btn:hover {
-    border-radius: 100%;
-    background: rgb(188, 75, 81, 0.3);
-}
-
-/***/
 
 .container-carrito {
-    background: rebeccapurple;
-    width: 30rem;
-    height: 100%;
-    margin: 1rem auto;
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
 }
 
 .carrito {
-    background: red;
-    width: 90%;
-    height: 100%;
+    background: fuchsia;
+    width: 58rem;
+    height: 35rem;
+    position: absolute;
+    display: flex;
+    gap: 2rem;
 }
 
-.tittle {
+/*letras */
+.carrito .tittle {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    margin-top: 6rem;
+    margin-left: 0rem;
+    background: dimgrey;
+}
+
+#carrito-items {
     background: palegreen;
-    text-align: center;
-    height: 2rem;
+    width: 24rem;
+    height: 40rem;
+    position: relative;
+    display: flex;
+    margin-top: 2rem;
+    margin-left: -10rem;
+    height: fit-content;
+    overflow: hidden;
 }
 
-.carrito-items {
-    background: palevioletred;
-    width: 100%;
-    height: 10rem;
-    
+#items {
+    background: lavenderblush;
+    width: 12rem;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.5rem;
 }
 
-.items {
-    margin-top: 15rem;
-    background: salmon;
+#items p {   
+    font-size: 0.7rem;
+}
+
+.num {
+    margin-left: 4rem;
+    width: 13%;
 }
