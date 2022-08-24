@@ -13,7 +13,10 @@ btnCompra.forEach(addcardbtn => {
 btnCheckOut.addEventListener('click', comprarBtnClicked);
 
 function comprarBtnClicked() {
-    areaHTML.innerHTML = '';
+    //areaHTML.innerHTML = '';
+    window.alert('Gracias por preferirnos');
+    const shop = document.querySelectorAll('#carrito-items');
+    shop.innerHTML = `<div>Gracias por su compra</div>`;
     updateShoppingCardTotal();
 }
 

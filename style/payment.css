@@ -12,51 +12,76 @@
 .container-carrito {
     display: flex;
     flex-direction: row;
+    background: goldenrod;
+    width: 65rem;
+    height: 90%;
 }
 
 .carrito {
     background: fuchsia;
-    width: 58rem;
-    height: 35rem;
-    display: flex;
-    gap: 2rem;
+    width: 20%;
+    height: 100%;
 }
 
-/*letras */
-.carrito .tittle {
+.container-carrito .tittle {
     writing-mode: vertical-lr;
     transform: rotate(180deg);
-    margin-top: 6rem;
+    margin-top: 2rem;
     margin-left: 0rem;
-    background: dimgrey;
 }
 
+#total {
+   /* background: chocolate;*/
+    width: 50%;
+    height: 10%;
+    text-align: center;
+    margin-left: 2rem;
+    margin-top: 10rem;
+}
+
+
+#total #btn-pay {
+    background: #c3c3c3c3;
+    margin-left: 0rem;
+}
+
+#btn-pay:active {
+    border-radius: 2rem;
+    border: solid 1px rgb(47, 45, 45, 0.5);
+}
+
+/*
 #carrito-items {
     background: palegreen;
-    width: 24rem;
-    height: 50rem;
-    position: relative;
-    display: flex;
-    margin-top: 2rem;
-    margin-left: -10rem;
-    height: fit-content;
-    overflow: hidden;
-}
+}*/
+
 
 #items {
     background: lavenderblush;
     width: 12rem;
-    height: 25rem;
+    height: 18rem;
     display: flex;
     flex-direction: column;
-    margin-left: 1.5rem;
+    margin-top: 4.5rem;
+    margin-left: 2rem;
+    border-radius: 10px;
 }
 
 #items p {   
     font-size: 0.7rem;
+    line-height: 0.2rem;
 }
 
 .num {
     margin-left: 4rem;
     width: 30%;
+}
+
+#botonEliminar {
+    background: #c3c3c3c3;
+}
+
+#botonEliminar:hover {
+    border-radius: 2rem;
+    border: solid 0.5px rgb(0, 0, 0, 0.5);
 }
