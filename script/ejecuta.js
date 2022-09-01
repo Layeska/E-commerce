@@ -2,7 +2,6 @@ const areaHTML = document.querySelector('.container-carrito');
 const btnCompra = document.querySelectorAll('.buy');
 const btnCheckOut = document.querySelector('#btn-pay');
 
-
 let infoProducts = [];
 let compras;
 
@@ -13,10 +12,23 @@ btnCompra.forEach(addcardbtn => {
 btnCheckOut.addEventListener('click', comprarBtnClicked);
 
 function comprarBtnClicked() {
-    //areaHTML.innerHTML = '';
     window.alert('Gracias por preferirnos');
+    clean();
+    updateShoppingCardTotal();
+}
+
+function clean() {
     const shop = document.querySelectorAll('#carrito-items');
-    shop.innerHTML = `<div>Gracias por su compra</div>`;
+    for(let i=0; i< shop.length; i++) {
+        shop[i].innerHTML = '';
+    }
+    
+    cleanPrice();
+}
+
+function cleanPrice() {
+    const shoppingCardTotal = document.querySelector('.precio-total');
+    shoppingCardTotal.innerText = 'NIO 0';
     updateShoppingCardTotal();
 }
 
@@ -42,7 +54,6 @@ function addItemtoshopingCard(itemTitle, itemPrice, itemImge) {
         }
     }
     
-
     const shopingCardRow = document.createElement('div');
 
     const shopingCardContent = `
@@ -100,13 +111,17 @@ function quantityChanger(event) {
     const input = event.target;
 
     input.value <= 0 ? (input.value = 1) : null;
-   // input.value >= 4 ? (input.value = 4) : null;
 
     if(input.value >=4) { 
         input.value = 4;
-        window.alert('No tenemos más productos por el momento');
+        window.alert('Lo sentimos, :( No tenemos más productos por el momento');
     } else null;
 
     updateShoppingCardTotal();
 }
 
+const iconCarrito = document.querySelector('.icon-car');
+
+iconCarrito.addEventListener('click', () => {
+    window.alert('nadkv');
+})
